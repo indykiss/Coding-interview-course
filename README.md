@@ -7,3 +7,7 @@ His amazing repo is found here: https://github.com/StephenGrider/AlgoCasts
 <br></br>
 His course is here: https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/
 
+
+
+<br></br>
+Need to redo MaxChar, Integer reversal, Array Chunk, Anagrams. Not 100% sure I can get those independently. Relisten to the explanations. 
