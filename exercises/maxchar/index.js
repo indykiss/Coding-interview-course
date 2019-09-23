@@ -20,7 +20,7 @@ function maxChar(str) {
       }
   }
 
-// Use for…in to iterate over the properties of an object (the object keys). For..in also works for strings/ arrays, I think
+// Use for…in to iterate over the properties of an object (iterate over the object keys)
   for (let char in charMap) {
     if (charMap[char] > max) {
       max = charMap[char];
