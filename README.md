@@ -10,4 +10,6 @@ His course is here: https://www.udemy.com/coding-interview-bootcamp-algorithms-a
 
 
 <br></br>
-Need to redo MaxChar, Integer reversal, Array Chunk, Anagrams. Not 100% sure I can get those independently. Relisten to the explanations. 
+Need to redo steps exercise. Not 100% sure I can get that independently. Relisten to the explanations. 
+<br> </br>
+In general, practice by taking the directions, throw it into a repl.it and try it out. 
