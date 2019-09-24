@@ -17,6 +17,35 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// We're going to use the recursive solution
+// We add a second argument for keeping track of the row we're on. Third argument is stair
+
+function steps(n, row = 0, stair = "") {
+
+// Therefore, we need a base case, when we reach 0.
+  if(n === row) {
+    return;
+  }
+
+// The action. We are hitting the end of the row
+  if (n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+
+// We are assembling a stair string row
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+
+// Remember, we need to call the function again with a changed argument.
+  steps(n, row, stair);
+
+}
+
+
+steps(2);
 
 module.exports = steps;
