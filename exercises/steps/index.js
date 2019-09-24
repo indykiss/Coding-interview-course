@@ -39,13 +39,13 @@ function steps(n, row = 0, stair = "") {
   } else {
     stair += ' ';
   }
-
-// Remember, we need to call the function again with a changed argument.
+// Call again with changed argument to get te space in the "stair"
   steps(n, row, stair);
 
 }
 
 
-steps(2);
+steps(4);
+
 
 module.exports = steps;
