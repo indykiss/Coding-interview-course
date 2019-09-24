@@ -8,47 +8,52 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-// Close but not there yet
-
+// Much better!!!
 function anagrams(stringA, stringB) {
-  const mapStringA = {};
-  const mapStringB = {};
+   return anagramMapHelper(stringA) === anagramMapHelper(stringB)
+}
 
-  for(let char of stringA) {
-    if (char != " ") {
-      if(mapStringA[char]) {
-        mapStringA[char]++
-      } else {
-        mapStringA[char] = 1;
-      }
-    }
-  }
-
-  for(let char of stringB) {
-    if (char != " ") {
-      if(mapStringB[char]) {
-        mapStringB[char]++
-      } else {
-        mapStringB[char] = 1;
-      }
-    }
-  }
-
-  if (mapStringA == mapStringB) {
-    console.log(true) 
-  }
-    else {
-      console.log(false) 
-    }
-
-  console.log(mapStringA)
-  console.log(mapStringB)
-
-
+function anagramMapHelper(str) {
+  return str.replace(/[^\w]/g, "")
+  .toLowerCase()
+  .split('')
+  .sort()
+  .join('');
 }
 
 // anagrams('Hi there', 'Bye there')
-anagrams('rail safety', 'fairy tales')
+anagrams('rail safety', 'fairy tal!!es')
+
+
+
+// Lots of iteration! Less good option of solution.
+
+// function anagrams(stringA, stringB) {
+//   const aCharMap = anagramMapHelper(stringA);
+//   const bCharMap = anagramMapHelper(stringB);  
+
+//   if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+//     return false;
+//   }
+
+//   for(let char in aCharMap) {
+//     if (aCharMap[char] !== bCharMap[char]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// function anagramMapHelper(str) {
+//   const charMap = {};
+
+//   for(let char of str.replace(/[^/w]/g, "").toLowerCase()) { charMap = charMap[char] + 1 || 1; }
+//   return charMap
+// }
+
+// anagrams('rail safety', 'fairy talessssss')
+
 
 
 module.exports = anagrams;
