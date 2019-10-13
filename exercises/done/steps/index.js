@@ -18,7 +18,8 @@
 //       '####'
 
 // We're going to use the recursive solution
-// We add a second argument for keeping track of the row we're on. Third argument is stair
+// We add a second argument for keeping track of the row we're on.
+// Third argument is looking at the content in each row (the stair)
 
 function steps(n, row = 0, stair = "") {
 
@@ -39,7 +40,7 @@ function steps(n, row = 0, stair = "") {
   } else {
     stair += ' ';
   }
-// Call again with changed argument to get te space in the "stair"
+// Call again with changed argument to get the space in the "stair"
   steps(n, row, stair);
 
 }
