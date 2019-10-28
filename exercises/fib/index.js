@@ -8,6 +8,18 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// This is the simplest solution. The one to remember! 
+// But there's an iteration one as well 
+// Next step is to add memoization to the below
+
+function fib(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n-1) + fib(n-2);
+}
+
+fib(4);
 
 module.exports = fib;
