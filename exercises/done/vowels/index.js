@@ -19,4 +19,16 @@ function vowels(str) {
     return counter;
 }
 
+
+// Much simpler RegEx version exists
+// function vowels(str) {
+
+// // g means we dont stop at the first match
+//     const matches = str.match(/[aeiouAEIOU]/g);
+
+//     return matches.length
+// }
+
+
+
 module.exports = vowels;

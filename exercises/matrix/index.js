@@ -15,6 +15,27 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+function matrix(n) {
+    const endIndex = (n^2) + 1
+
+
+
+// outer square
+// first row print 1 -> n
+
+
+// right edge, n -> (2n - 1)
+
+
+// bottom row backwards (2n-1) -> (?)
+
+
+// left edge up (?) -> (??)
+
+
+// recursion to get the inner square, keep going til 
+// all the inner squares are done
+
+}
 
 module.exports = matrix;
