@@ -11,5 +11,6 @@ His course is here: https://www.udemy.com/coding-interview-bootcamp-algorithms-a
 
 <br></br>
 Good practice: Redo every algo at end of the course to solidify knowledge. 
+I've redone through vowels, before matrix.
 <br> </br>
 In general, practice by taking the directions, throw it into a repl.it and try it out. 
