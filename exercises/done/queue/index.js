@@ -29,7 +29,6 @@ class Queue {
     remove(record) {
         return this.arr.pop(record);
     }
-
 }
 
 module.exports = Queue;

@@ -24,6 +24,24 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+    let newQueue = new Queue();
+
+// We want to not push empty values into new queue
+// So we continue until the next value in each source is empty
+    while(sourceOne.peek() || sourceTwo.peek()) {
+        // No empty values in a source if lengths are unequal
+        if(sourceOne.peek()) {
+        // Add value to new queue and pop it off source
+            newQueue.add(sourceOne.remove());
+        }
+        if (sourceTwo.peek()) {
+            newQueue.add(sourceTwo.remove());
+        }
+    }
+
+    return newQueue;
+
+}
 
 module.exports = weave;
