@@ -12,5 +12,7 @@ His course is here: https://www.udemy.com/coding-interview-bootcamp-algorithms-a
 <br></br>
 Good practice: Redo every algo at end of the course to solidify knowledge. 
 I've redone through vowels, before matrix.
+
 <br> </br>
 In general, practice by taking the directions, throw it into a repl.it and try it out. 
+Runtime complexity is based on the input's effect of the output. The smaller the amount of work done needed in the algo, the more efficient in is in terms of time and space. Ex: that's why nested loops are bad if you can avoid it. 
