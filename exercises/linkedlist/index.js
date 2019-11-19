@@ -17,6 +17,11 @@
 // const nodeTwo = {data: 456}
 // Reference!! nodeOne.next = nodeTwo
 
+class FuckThis {
+    constructor(cant, doThis) {
+        console.log("I'm stopping linked lists bc confused")
+    }
+}
 
 class Node {
     constructor(data, next = null) {
@@ -104,8 +109,41 @@ class LinkedList {
     }
 
     insertLast(data) {
-
+        // Let's get the last node 
+        const last = this.getLast();
+        // If there is a last node, let's make a new 
+        // node and push it to the end
+        if (last) {
+            last.next = new Node(data); 
+        } else {
+            this.head = new Node(data)
+        }
     }
+
+    getAt(index) {
+        // Returns the node at a particular index. Start at head, make a counter, go through until
+        // Counter = index, then return that node 
+        let counter = 0; 
+        let node = this.head;
+
+        // Edge case, no nodes
+        if(!this.head) {
+            return null;
+        }
+        // If node exists, then we check if counter === index
+        // If not, then increment node.
+        // Edge: if index > total # of nodes, then we say null
+        while(node) {
+            if(counter === index) {
+                return node;
+            } 
+
+            counter++;
+            node = node.next;
+        }
+        return null;
+    }
+
 
 
 }
