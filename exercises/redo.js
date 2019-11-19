@@ -20,3 +20,12 @@ function reverseInt(int) {
     // Edge case: negative numbers 
     return newNum * Math.sign(int);
   }
+
+// Anagrams
+// Check to see if two provided strings are anagrams of each other.
+// anagrams('rail safety', 'fairy tales') --> True
+
+// Checking if reversed str = original string 
+
+function anagrams(str1, str2) {
+}
