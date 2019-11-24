@@ -8,6 +8,16 @@ function reverse(str) {
     return str.split('').reverse().join('');
 }
 
+function reverseAlt(str) {
+  let newStr = ""
+
+  for(var i = str.length - 1; i >= 0 - 1; i--) {
+    newStr += str[i]
+  }
+
+  return newStr;
+}
+
 // Integer reversal
 
 function reverseInt(int) {
