@@ -18,6 +18,7 @@ function reverseAlt(str) {
   return newStr;
 }
 
+
 // Integer reversal
 
 function reverseInt(int) {
@@ -30,6 +31,7 @@ function reverseInt(int) {
     // Edge case: negative numbers 
     return newNum * Math.sign(int);
   }
+
 
 // Anagrams
 // Check to see if two provided strings are anagrams of each other.
