@@ -18,7 +18,6 @@ function reverseAlt(str) {
   return newStr;
 }
 
-
 // Integer reversal
 
 function reverseInt(int) {
