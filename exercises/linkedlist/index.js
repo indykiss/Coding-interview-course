@@ -17,12 +17,6 @@
 // const nodeTwo = {data: 456}
 // Reference!! nodeOne.next = nodeTwo
 
-class FuckThis {
-    constructor(cant, doThis) {
-        console.log("I'm stopping linked lists bc confused")
-    }
-}
-
 class Node {
     constructor(data, next = null) {
         this.data = data;
@@ -35,7 +29,7 @@ class LinkedList {
         this.head = null;
     }
 
-    // adding a node to front of linked list
+    // Add a node to front of linked list
     insertFirst(data) {
         // make a new node thats connected to the head node/ past node
         const node = new Node(data, this.head);
@@ -57,10 +51,12 @@ class LinkedList {
         return counter;
     }
 
+    // Return head
     getFirst() {
         return this.head;
     }
 
+    // Return tail
     getLast() {
         let node = this.head
 
@@ -76,10 +72,12 @@ class LinkedList {
         }
     }
 
+    // Remove all nodes
     clear() {
         this.head = null;
     }
 
+    // Remove the head
     removeFirst() {
         if(!this.head) {
             return null;
@@ -87,6 +85,7 @@ class LinkedList {
         this.head = this.head.next;
     }
 
+    // Remove the tail
     removeLast() {
         let previous = this.head;
         let node = this.head.next;
@@ -108,6 +107,7 @@ class LinkedList {
         previous.next = null;
     }
 
+    // Add a new tail
     insertLast(data) {
         // Let's get the last node 
         const last = this.getLast();
@@ -120,6 +120,7 @@ class LinkedList {
         }
     }
 
+    // Return the node at desired index
     getAt(index) {
         // Returns the node at a particular index. Start at head, make a counter, go through until
         // Counter = index, then return that node 
@@ -143,8 +144,6 @@ class LinkedList {
         }
         return null;
     }
-
-
 
 }
 
