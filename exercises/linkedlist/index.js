@@ -131,6 +131,7 @@ class LinkedList {
         if(!this.head) {
             return null;
         }
+        
         // If node exists, then we check if counter === index
         // If not, then increment node.
         // Edge: if index > total # of nodes, then we say null
