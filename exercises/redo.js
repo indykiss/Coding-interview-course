@@ -106,3 +106,12 @@ function maxChar(str) {
 
   return bigChar;
 }
+
+
+
+// Power of four, leetcode
+// Check if the entered number is a power of four 
+
+function powerFour(num) {
+  return (Math.log(num)/ Math.log(4) % 1 === 0)
+}
