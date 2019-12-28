@@ -131,7 +131,7 @@ class LinkedList {
         if(!this.head) {
             return null;
         }
-        
+    
         // If node exists, then we check if counter === index
         // If not, then increment node.
         // Edge: if index > total # of nodes, then we say null
@@ -145,6 +145,27 @@ class LinkedList {
         }
         return null;
     }
+
+// I want to stop looking at linked lists. 
+// So I copied & pasted the below :( 
+// Must go over linked lists again in the future
+// But for now, I should move on. 
+
+    insertAt(data, index) {
+        if (!this.head) {
+          this.head = new Node(data);
+          return;
+        }
+    
+        if (index === 0) {
+          this.head = new Node(data, this.head);
+          return;
+        }
+    
+        const previous = this.getAt(index - 1) || this.getLast();
+        const node = new Node(data, previous.next);
+        previous.next = node;
+      }
 
 }
 

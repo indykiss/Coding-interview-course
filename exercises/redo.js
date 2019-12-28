@@ -108,7 +108,6 @@ function maxChar(str) {
 }
 
 
-
 // Power of four, leetcode
 // Check if the entered number is a power of four 
 
