@@ -10,7 +10,27 @@
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
 
-class Node {}
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.children = [];
+    }
+
+    // Add a node
+    add(data) {
+        const node = new Node(data);
+        this.children.push(node);
+    }
+
+    // Given data, remove the node that has this data
+    remove(data) {
+        // Filtering out the nodes that don't have data
+        this.children = this.children.filter(node => {
+            return node.data !== data;
+        })
+    }
+
+}
 
 class Tree {}
 
