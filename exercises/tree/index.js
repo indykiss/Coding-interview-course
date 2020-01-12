@@ -32,7 +32,39 @@ class Node {
 
 }
 
-class Tree {}
+// When whiteboarding, draw it out! 
+class Tree {
+    constructor() {
+        this.root = null;
+    }
+
+    // These funcs just look through the tree in BF or DF
+        // so it's just the basic mechanism of looking
+    traverseBF(fn) {
+        const arr = [this.root];
+        while(arr.length) {
+            const node = arr.shift();
+            // Main difference is how we're looking @ data
+            // We push children into the END of arr
+            arr.push(...node.children);
+            fn(node);
+        }
+    }
+
+    traverseDF(fn) {
+        const arr = [this.root]
+        while(arr.length) {
+            const node = arr.shift();
+            // Main difference is how we're looking @ data
+            // We push children into the START of arr
+            arr.unshift(...node.children);
+                // spread = O(n) time
+            fn(node);
+        }
+    }
+}
+
+
 
 
 module.exports = { Tree, Node };
